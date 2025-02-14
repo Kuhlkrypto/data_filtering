@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imdf_net_1738677830.395507" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imdf_net_1738677830.395507</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <transition id="742aec59-39e5-4c3d-ae19-fee7efd08d9e">
+        <name>
+          <text>sleep</text>
+        </name>
+      </transition>
+      <arc id="140619332420464" source="source" target="742aec59-39e5-4c3d-ae19-fee7efd08d9e"/>
+      <arc id="140621118760144" source="742aec59-39e5-4c3d-ae19-fee7efd08d9e" target="sink"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

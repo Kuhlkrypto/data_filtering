@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imdf_net_1738677874.9661462" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imdf_net_1738677874.9661462</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="p_5">
+        <name>
+          <text>p_5</text>
+        </name>
+      </place>
+      <place id="p_4">
+        <name>
+          <text>p_4</text>
+        </name>
+      </place>
+      <place id="p_6">
+        <name>
+          <text>p_6</text>
+        </name>
+      </place>
+      <place id="p_8">
+        <name>
+          <text>p_8</text>
+        </name>
+      </place>
+      <transition id="8fd13e68-0193-4b3d-9eac-44d8d9a14533">
+        <name>
+          <text>Prepare implements</text>
+        </name>
+      </transition>
+      <transition id="skip_6">
+        <name>
+          <text>skip_6</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="37a67d9a-fd75-438d-840a-75e0aa4c4544"/>
+      </transition>
+      <transition id="tau_1">
+        <name>
+          <text>tau_1</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="8e7b912c-631f-4475-a35d-52be72cc8ce4"/>
+      </transition>
+      <transition id="skip_4">
+        <name>
+          <text>skip_4</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="2819e517-608c-4816-bdda-42ce88be04da"/>
+      </transition>
+      <transition id="skip_5">
+        <name>
+          <text>skip_5</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="55c2186c-2ab8-43b4-b49d-8af2f60f91e0"/>
+      </transition>
+      <transition id="77e8c057-b0e5-46ea-af57-eaad9720ef6f">
+        <name>
+          <text>Puncture</text>
+        </name>
+      </transition>
+      <transition id="ca575b5e-9530-469e-8ee7-aa2d1040d49e">
+        <name>
+          <text>Advance catheter</text>
+        </name>
+      </transition>
+      <arc id="140621122944640" source="source" target="tau_1"/>
+      <arc id="140621122804160" source="8fd13e68-0193-4b3d-9eac-44d8d9a14533" target="p_6"/>
+      <arc id="140621122809824" source="p_6" target="skip_4"/>
+      <arc id="140621118863296" source="p_4" target="skip_6"/>
+      <arc id="140621118862624" source="skip_6" target="sink"/>
+      <arc id="140621121365920" source="77e8c057-b0e5-46ea-af57-eaad9720ef6f" target="p_8"/>
+      <arc id="140621119583328" source="p_8" target="ca575b5e-9530-469e-8ee7-aa2d1040d49e"/>
+      <arc id="140621119574688" source="ca575b5e-9530-469e-8ee7-aa2d1040d49e" target="sink"/>
+      <arc id="140621122798832" source="p_5" target="8fd13e68-0193-4b3d-9eac-44d8d9a14533"/>
+      <arc id="140621119570992" source="tau_1" target="p_5"/>
+      <arc id="140621122802576" source="p_6" target="skip_5"/>
+      <arc id="140621118854032" source="skip_5" target="p_4"/>
+      <arc id="140621118852064" source="skip_4" target="p_5"/>
+      <arc id="140621121579824" source="p_4" target="77e8c057-b0e5-46ea-af57-eaad9720ef6f"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>
